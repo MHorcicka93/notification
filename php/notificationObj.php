@@ -33,7 +33,7 @@
             for ($i = 0; $i < 7; $i++) {
                 $posts[$i] = array("name" => $name[$i], "message" => $message[$i], "urlImg" => $urlImg[$i], "time" => $time[$i], "readPost" => false);
               } 
-              //  $post->listPosts();
+        
             /*
                 // $post1 = array("name" => $name[0], "message" => $message[0], "urlImg"=>$urlImg[0] ,"time" => $time[0]);
                 // $post2 = array("name" => $name[1], "message" => $message[1], "urlImg"=>$urlImg[1] ,"time" => $time[1]);
