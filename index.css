@@ -1,0 +1,96 @@
+@font-face {
+  font-family: "PlusJakartaSans";
+  src: url("assets/fonts/PlusJakartaSans-VariableFont_wght.ttf");
+  font-weight: 500, 800;
+}
+body {
+  font-family: "PlusJakartaSans";
+  font-size: 62.5%;
+}
+
+.post__item {
+  display: flex;
+  -webkit-margin-start: 0;
+          margin-inline-start: 0;
+  -webkit-margin-end: 0;
+          margin-inline-end: 0;
+  padding: 5px;
+  font-size: 1rem;
+}
+.post__item .user--link {
+  font-weight: 800;
+  color: black;
+}
+.post__item .signal {
+  width: 7px;
+  background-color: red;
+  height: 7px;
+  border-radius: 50%;
+  margin: 3px 6px;
+  display: inline-block;
+}
+.post__name--link {
+  text-decoration: none;
+  font-weight: 800;
+}
+.post__img {
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+}
+
+.react--link {
+  color: rgb(116, 116, 116);
+}
+
+.group--link {
+  color: rgb(14, 20, 129);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
+
+h3, h5 {
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+}
+
+.title {
+  font-weight: 800;
+  display: flex;
+}
+.title #counter {
+  margin-left: 0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: rgb(0, 0, 158);
+  text-align: center;
+  color: white;
+  border-radius: 10%;
+}
+
+.nav {
+  margin: 0 1rem;
+  font-size: 1rem;
+}
+.nav ul {
+  display: flex;
+  list-style: none;
+  align-items: baseline;
+  justify-content: space-between;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+}
+.nav h5 {
+  color: rgb(153, 152, 152);
+}
+
+main {
+  font-size: 1rem;
+}/*# sourceMappingURL=index.css.map */

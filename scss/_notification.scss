@@ -1,0 +1,50 @@
+.post {
+    &__item {
+        display: flex;
+        margin-inline-start:  0;
+        margin-inline-end:  0;
+        padding: 5px;
+        font-size: 1rem;
+        // background-color: rgba(141, 145, 158, 0.274);
+       
+       & .user--link{
+        font-weight: 800;
+        color: black;
+      }
+      & .signal{
+          width: 7px;
+          background-color: red;
+          height: 7px;
+          border-radius: 50%;
+          margin: 3px 6px;
+          display: inline-block;
+         }
+        
+      }
+      &__name--link{
+        text-decoration: none;
+        font-weight: 800;
+      }
+
+    &__img {
+        width: 30px;
+        height: 30px;
+        margin: 10px;
+    }
+
+}
+.react--link{
+  color: rgb(116, 116, 116);
+}
+.group--link{
+  color: rgb(14, 20, 129);
+}
+//Footer
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
