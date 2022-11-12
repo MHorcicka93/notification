@@ -33,7 +33,6 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
 </div>
-
-
+<!-- Footer -->
 <script type="text/javascript" src="index.js"></script>
 <?php include "./php/Footer/footer.php" ?>
