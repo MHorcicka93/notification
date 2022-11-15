@@ -33,6 +33,11 @@ display: flex;
         color: rgb(153, 152, 152);
         
     }
+    & #allRead--link{
+        cursor: pointer;
+        // text-decoration: none;
+        // color:rgb(153, 152, 152) ;
+    }
 }
 
 main{

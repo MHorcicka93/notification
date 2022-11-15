@@ -31,7 +31,7 @@
             $time = array("1m", "5m", "1 day", "5 days", "1 week", "2 weeks", "2 weeks"); 
           
             for ($i = 0; $i < 7; $i++) {
-                $posts[$i] = array("name" => $name[$i], "message" => $message[$i], "urlImg" => $urlImg[$i], "time" => $time[$i], "readPost" => false);
+                $posts[$i] = array("id"=>$i+1,"name" => $name[$i], "message" => $message[$i], "urlImg" => $urlImg[$i], "time" => $time[$i], "readPost" => false);
               } 
         
             /*

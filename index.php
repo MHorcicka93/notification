@@ -11,9 +11,9 @@
           Notification <span id="counter"></span>
             </h3>
         </li>
-        <li>
-            <h5>
-                <a id="allRead--link">Mark all as read</a>
+        <li id="allRead--link">
+         <h5>
+               Mark all as read
             </h5>
         </li>
     </ul>
@@ -34,5 +34,7 @@
     Coded by <a href="#">Your Name Here</a>.
 </div>
 <!-- Footer -->
+<script type="text/javascript" src="./js/ajax.js"></script>
+<script type="text/javascript" src="./js/function.js"></script>
 <script type="text/javascript" src="index.js"></script>
 <?php include "./php/Footer/footer.php" ?>
