@@ -1,3 +1,10 @@
 <?php include "notificationObj.php" ;
-echo json_encode($posts);
+
+foreach($posts as $key => $value) {
+   
+    $postIDAndStatus[$key]=array('id'=>$value['id'],'status'=>false);
+}
+
+
+echo json_encode($postIDAndStatus);
 ?>

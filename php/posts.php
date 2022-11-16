@@ -5,7 +5,8 @@
       function listPosts($posts){
                   
         foreach ($posts as $key => $value) {
-            $post = new Post($key, $value["name"], $value["message"], $value["urlImg"], $value["time"]);
+       
+            $post = new Post($key, $value["name"], $value["post"], $value["urlImg"], $value["time"],$value["message"]);
             $post->getPost();
         }
     }

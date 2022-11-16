@@ -21,7 +21,7 @@
 
 <main>
     <section>
-        <div>
+        <div class="posts">
             <?php include "./php/notificationObj.php";
              listPosts($posts);
              ?>
@@ -31,7 +31,7 @@
 
 <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Michal Horčička</a>.
 </div>
 <!-- Footer -->
 <script type="text/javascript" src="./js/ajax.js"></script>
