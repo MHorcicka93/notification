@@ -20,7 +20,7 @@
 </header>
 
 <main>
-    <section>
+    <section id="posts__section">
         <div class="posts">
             <?php include "./php/notificationObj.php";
              listPosts($posts);

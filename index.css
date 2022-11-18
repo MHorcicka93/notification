@@ -81,6 +81,13 @@ body {
   }
 }
 
+.error__modul {
+  text-align: center;
+  border: 2px solid rgb(233, 29, 29);
+  border-radius: 15px;
+  font-weight: bold;
+}
+
 .post__item {
   display: flex;
   flex-flow: column;

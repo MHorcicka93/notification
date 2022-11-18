@@ -8,9 +8,8 @@ function selectItem() {
 // }
 function initialization(obj) {
 
-    const statusObj = [...obj];
-    console.log(statusObj);
-    let unReadPost = obj.length;
+    const statusObj = [...obj].flat();
+    let unReadPost = statusObj.length;
     selectItem();
     return {
         posts: statusObj,

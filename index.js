@@ -1,6 +1,6 @@
 try {
-    const flatPost = connectAjax().flat(); // array[]
-    const initialObj = initialization(flatPost); // 7 posts
+    const flatPost = connectAjax(); // array[]
+    const initialPosts = initialization(flatPost["posts"]); // 7 posts
 
 
     // for (let index = 0; index < statusObj.length; index++) {
@@ -16,16 +16,16 @@ try {
     const post = $(".posts");
     post.click(function (e) {
         let selectId = setID(e); //set number [1,2,3,4,5,6,7] of selected post__item
-        const obj = initialObj["posts"][selectId - 1];
+        const obj = initialPosts["posts"][selectId - 1];
         console.log(selectId);
+        // isRead = true;
         isRead = obj["status"];
         if (!isRead) {
             changeStatus(obj);
-            initialObj["countUnReadPost"]--;
+            initialPosts["countUnReadPost"]--;
             isReadPost(selectId);
-            setCounter(initialObj["countUnReadPost"]);
-
-        }
+            setCounter(initialPosts["countUnReadPost"]);
+        } 
     })
 
 
@@ -70,15 +70,22 @@ try {
 
     $("#allRead--link").click(function () {
 
-        initialObj["posts"].forEach((obj) => {
+        initialPosts["posts"].forEach((obj) => {
             isReadPost(obj["id"]);
         })
 
-        initialObj["countUnReadPost"] = 0;
+        initialPosts["countUnReadPost"] = 0;
 
-        setCounter(initialObj["countUnReadPost"]);
+        setCounter(initialPosts["countUnReadPost"]);
     })
-    setCounter(initialObj["countUnReadPost"]);
-} catch (error) {
-    console.log(error);
+    setCounter(initialPosts["countUnReadPost"]);
+} catch (errorMessage) {
+    let parentAlert = document.createElement("div");
+    parentAlert.setAttribute("class", "error__modul");
+    const textAlert = document.createTextNode(errorMessage);
+    parentAlert.appendChild(textAlert);
+
+    // let error =document.getElementById("posts__section");
+    let error = $("#posts__section")[0];
+    error.insertBefore(parentAlert, error.children[0]);
 }
