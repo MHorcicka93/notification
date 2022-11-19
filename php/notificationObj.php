@@ -21,27 +21,27 @@ $urlImg = array(
 );
 
 $post = array(
-    "reacted to your recent post <a href='#' class='post__name--link react--link'>My first tournament today!</a>",
+    "reacted to your recent post <a href='#' class='post__name--link in_react--link'>My first tournament today!</a>",
     "followed you",
-    "has joined your group <a href='#' class='post__name--link group--link'>Chess Club</a>",
+    "has joined your group <a href='#' class='post__name--link in_react--link'>Chess Club</a>",
     "sent you a private message",
     "commented on your picture",
-    "reacted to your recent post 5 end-game strategies to increase your win rate",
-    "left the group  <a href='#' class='post__name--link group--link'>Chess Club</a>"
+    "reacted to your recent post <strong class='out_react--link' >5 end-game strategies to increase your win rate</strong>",
+    "left the group  <a href='#' class='post__name--link out_react--link'>Chess Club</a>"
 );
 
 $time = array("1m", "5m", "1 day", "5 days", "1 week", "2 weeks", "2 weeks");
 
-$message = array("","","","","Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
-I'm already having lots of fun and improving my game.","","");
-$status=array(false,false,false,false,false,false,false);
+$message = array("","","","Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
+I'm already having lots of fun and improving my game.","","","");
+
 for ($i = 0; $i < 7; $i++) {
     
     if (strlen($message[$i]) > 0) {
-        $posts[$i] = array("id" => $i + 1, "name" => $name[$i],"post" => $post[$i],"message" => $message[$i], "urlImg" => $urlImg[$i], "time" => $time[$i], "readPost" => 0);
+        $posts[$i] = array("id" => $i + 1, "name" => $name[$i],"post" => $post[$i],"message" => $message[$i], "urlImg" => $urlImg[$i], "time" => $time[$i]);
        
     }else{
-        $posts[$i] = array("id" => $i + 1, "name" => $name[$i], "post" => $post[$i],"message" => $message[$i], "urlImg" => $urlImg[$i], "time" => $time[$i], "readPost" => 0);
+        $posts[$i] = array("id" => $i + 1, "name" => $name[$i], "post" => $post[$i],"message" => $message[$i], "urlImg" => $urlImg[$i], "time" => $time[$i]);
         
     }
 } 

@@ -16,16 +16,19 @@ try {
     const post = $(".posts");
     post.click(function (e) {
         let selectId = setID(e); //set number [1,2,3,4,5,6,7] of selected post__item
-        const obj = initialPosts["posts"][selectId - 1];
-        console.log(selectId);
-        // isRead = true;
-        isRead = obj["status"];
-        if (!isRead) {
-            changeStatus(obj);
-            initialPosts["countUnReadPost"]--;
-            isReadPost(selectId);
-            setCounter(initialPosts["countUnReadPost"]);
-        } 
+       if (selectId.length > 0) {
+        
+           const obj = initialPosts["posts"][selectId - 1];
+           console.log(selectId);
+           // isRead = true;
+           isRead = obj["status"];
+           if (!isRead ) {
+               changeStatus(obj);
+               initialPosts["countUnReadPost"]--;
+               isReadPost(selectId);
+               setCounter(initialPosts["countUnReadPost"]);
+           } 
+       }
     })
 
 
@@ -80,12 +83,9 @@ try {
     })
     setCounter(initialPosts["countUnReadPost"]);
 } catch (errorMessage) {
-    let parentAlert = document.createElement("div");
-    parentAlert.setAttribute("class", "error__modul");
-    const textAlert = document.createTextNode(errorMessage);
-    parentAlert.appendChild(textAlert);
+    const parentAlert = addMessage(errorMessage);
 
     // let error =document.getElementById("posts__section");
-    let error = $("#posts__section")[0];
+    const error = $("#posts__section")[0];
     error.insertBefore(parentAlert, error.children[0]);
 }

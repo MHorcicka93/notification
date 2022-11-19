@@ -55,12 +55,12 @@ html {
 
     & .user--link {
       font-weight: 800;
-      color: black;
+      color: hsl(224, 21%, 14%);
     }
 
     & .signal {
       width: 7px;
-      background-color: red;
+      background-color: hsl(1, 90%, 64%);
       height: 7px;
       border-radius: 50%;
       margin: 3px 6px;
@@ -68,17 +68,19 @@ html {
     }
 
   }
-
+  &__content{
+    // background-color: aquamarine;
+    & span:nth-child(5n){
+      color: hsl(219, 14%, 63%);
+      font-size: 14px;
+    }
+  }
   &__name--link {
     text-decoration: none;
     font-weight: 800;
   }
 
-  &__img {
-    width: 30px;
-    height: 30px;
-    margin: 10px;
-  }
+  
 
   &__content {
     width: 100%;
@@ -86,25 +88,44 @@ html {
   
 
   &__message {
-    border: rgba(184, 181, 181, 0.404) solid 2px;
+    border: hsl(205, 33%, 90%) solid 2px;
     border-radius: 5px;
     padding: 15px;
     margin: 0;
+    margin-top: 15px;
     width: 80%;
+    cursor: pointer;
+    &:hover{
+      background-color:hsl(205, 33%, 90%) ;
+    }
     @media screen and (max-width:375px) {
       width: 84%;
       margin: 10px auto;
-  
+ 
     }
+  }
+  &__img{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+  }
+  &__container{
+    display: flex;
+    justify-content: space-between;
   }
 
 }
-
-.react--link {
-  color: rgb(116, 116, 116);
+.user__img{
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    
+}
+.out_react--link {
+  color: hsl(219, 12%, 42%);
 }
 
-.group--link {
+.in_react--link {
   color: rgb(14, 20, 129);
 }
 

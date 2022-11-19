@@ -1,6 +1,6 @@
 function selectItem() {
     const postItem = $(".post__item")
-    postItem.css("background-color", "rgba(141, 145, 158, 0.05)");
+    postItem.css("background-color", "hsl(210, 60%, 98%)");
 }
 // function selectItem(id) {
 //     const postItem = $(".post__item--" + (id))
@@ -16,6 +16,7 @@ function initialization(obj) {
         countUnReadPost: unReadPost
     }
 }
+
 function isReadPost(id) {
     const postItem = '[class*="post__item--' + (id) + '"]';
 
@@ -30,7 +31,8 @@ function changeStatus(obj) {
 
 }
 function setID(e) {
-    let id = ""
+    console.log(e);
+    let id = "";
     const selectElement = e.target.parentElement.parentElement.className;
     const selectContentElement = e.target.parentElement.parentElement.parentElement.className;
 
@@ -42,4 +44,11 @@ function setID(e) {
 
     }
     return id
+}
+function addMessage(error) {
+    const parentAlert = document.createElement("div");
+    parentAlert.setAttribute("class", "error__modul");
+    const textAlert = document.createTextNode(error);
+    parentAlert.appendChild(textAlert);
+    return parentAlert;
 }
